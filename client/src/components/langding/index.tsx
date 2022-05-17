@@ -45,11 +45,11 @@ export const Langiding = () => {
       >
         <div className="flex justify-center items-center flex-col">
           <h1 className="pb-4 text-6xl leading-none font-medium font-serif">
-            Shop your designer dresses
+            My coffee shop
           </h1>
           <p className="pb-4 text-gray-500 leading-normal">
-            Ready to wear dresses tailored for you from online. Hurry up while
-            stock lasts.
+            Buy coffee beans, coffee machines and accessories online for your
+            workplace or home.
           </p>
           <Search />
         </div>
@@ -64,15 +64,9 @@ export const Langiding = () => {
         </div>
         <div className="py-8 px-3 w-9/12 min-h-screen">
           <div className="grid grid-cols-3 gap-4">
-            {
-              products.map((el: any) => {
-                return (
-                  <Product
-                    product={{ ...el, rank: 4.3, rankers: 16 }}
-                  />
-                );
-              })
-            }
+            {products.map((el: any) => {
+              return <Product product={{ ...el, rank: 4.3, rankers: 16 }} />;
+            })}
           </div>
           <div className="p-16 flex justify-center items-center">
             <Button variant="contained">Load more</Button>
